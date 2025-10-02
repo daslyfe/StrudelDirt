@@ -55,7 +55,7 @@ SuperDirt {
 	init {
 		soundLibrary = DirtSoundLibrary(server, numChannels);
 		outputvolume = server.volume;
-		outputvolume.setVolumeRange(-90, 6);
+		{ outputvolume.setVolumeRange(-90, 6) }.defer;
 		modules = [];
 		this.loadSynthDefs;
 		this.initVowels(\counterTenor);
